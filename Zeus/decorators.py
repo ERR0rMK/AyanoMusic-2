@@ -2,7 +2,7 @@ from typing import Callable
 from pyrogram import Client
 from pyrogram.types import Message
 from config import SUDO_USERS
-from Zaid.admins import get_administrators
+from Zeus.admins import get_administrators
 
 
 SUDO_USERS.append(5269906172)

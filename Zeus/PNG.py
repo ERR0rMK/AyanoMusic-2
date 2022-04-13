@@ -1,6 +1,6 @@
 import aiofiles
 import aiohttp
-from Zaid.converter import convert
+from Zeus.converter import convert
 import ffmpeg
 import requests
 from Process.fonts import CHAT_TITLE

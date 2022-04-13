@@ -1,9 +1,9 @@
 import os
 import asyncio
-from Zaid.main import bot, call_py
+from Zeus.main import bot, call_py
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from Zaid.queues import QUEUE, clear_queue, get_queue, pop_an_item
+from Zeus.queues import QUEUE, clear_queue, get_queue, pop_an_item
 from pytgcalls.types.input_stream.quality import (
     HighQualityAudio,
     HighQualityVideo,

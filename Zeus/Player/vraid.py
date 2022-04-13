@@ -3,13 +3,13 @@ import asyncio
 
 from pyrogram import filters
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_6, SUDO_USERS
-from Zaid.inline import stream_markup
+from Zeus.inline import stream_markup
 from Process.design.thumbnail import thumb
 from Process.design.chatname import CHAT_TITLE
-from Zaid.filters import command, other_filters
-from Zaid.queues import QUEUE, add_to_queue
-from Zaid.main import call_py, Test as user
-from Zaid.main import bot as Zaid, Test
+from Zeus.filters import command, other_filters
+from Zeus.queues import QUEUE, add_to_queue
+from Zeus.main import call_py, Test as user
+from Zeus.main import bot as Zeus, Test
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
@@ -55,8 +55,8 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["videoraid", "vraid"], prefixes=HNDLR))
-async def vraid(c: Zaid, m: Message):
+@Zeus.on_message(filters.user(SUDO_USERS) & filters.command(["videoraid", "vraid"], prefixes=HNDLR))
+async def vraid(c: Zeus, m: Message):
     await m.delete()
     replied = m.reply_to_message
     inp = m.text.split(None, 2)[1]
@@ -261,8 +261,8 @@ async def vraid(c: Zaid, m: Message):
                             await m.reply_text(f"Started Raid on {chat_id}")
 
 
-@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["vraidlive", "vraidstream"], prefixes=HNDLR))
-async def raidlive(c: Zaid, m: Message):
+@Zeus.on_message(filters.user(SUDO_USERS) & filters.command(["vraidlive", "vraidstream"], prefixes=HNDLR))
+async def raidlive(c: Zeus, m: Message):
     await m.delete()
     chat_id = m.chat.id
     user_id = m.from_user.id

@@ -3,7 +3,7 @@ import asyncio
 import sys
 import git
 import heroku3
-from Zaid.main import BOT
+from Zeus.main import BOT
 from config import OWNER_ID, SUDO_USERS, HEROKU_APP_NAME, HEROKU_API_KEY
 from telethon.tl.functions.users import GetFullUserRequest
 # alive Pic By Default It's Will Show Our

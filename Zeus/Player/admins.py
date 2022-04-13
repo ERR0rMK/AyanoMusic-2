@@ -1,11 +1,11 @@
-from Zaid.Cache.admins import admins
-from Zaid.main import call_py
+from Zeus.Cache.admins import admins
+from Zeus.main import call_py
 from pyrogram import filters
-from Zaid.main import bot as Client
-from Zaid.decorators import authorized_users_only
-from Zaid.filters import command, other_filters
-from Zaid.queues import QUEUE, clear_queue
-from Zaid.utils import skip_current_song, skip_item
+from Zeus.main import bot as Client
+from Zeus.decorators import authorized_users_only
+from Zeus.filters import command, other_filters
+from Zeus.queues import QUEUE, clear_queue
+from Zeus.utils import skip_current_song, skip_item
 from config import BOT_USERNAME, GROUP_SUPPORT, IMG_3, UPDATES_CHANNEL
 from pyrogram.types import (
     CallbackQuery,

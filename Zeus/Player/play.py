@@ -9,17 +9,17 @@ import re
 
 import aiofiles
 import aiohttp
-from Zaid.converter import convert
+from Zeus.converter import convert
 import ffmpeg
 import requests
-from Zaid.fonts import CHAT_TITLE
+from Zeus.fonts import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, UPDATES_CHANNEL, GROUP_SUPPORT
-from Zaid.filters import command, other_filters
-from Zaid.queues import QUEUE, add_to_queue
-from Zaid.main import call_py, Test as user
-from Zaid.utils import bash
-from Zaid.main import bot as Client
+from Zeus.filters import command, other_filters
+from Zeus.queues import QUEUE, add_to_queue
+from Zeus.main import call_py, Test as user
+from Zeus.utils import bash
+from Zeus.main import bot as Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType

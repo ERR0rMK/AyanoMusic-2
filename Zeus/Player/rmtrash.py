@@ -1,8 +1,8 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from Zaid.filters import command, other_filters
-from Zaid.decorators import sudo_users_only, errors
+from Zeus.filters import command, other_filters
+from Zeus.decorators import sudo_users_only, errors
 
 downloads = os.path.realpath("Zeus/downloads")
 raw = os.path.realpath(".")

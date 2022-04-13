@@ -15,9 +15,9 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityVideo,
                                                   LowQualityVideo, MediumQualityVideo)
 
-from Zaid.queues import QUEUE, add_to_queue, get_queue, clear_queue
+from Zeus.queues import QUEUE, add_to_queue, get_queue, clear_queue
 
-from Zaid.main import call_py, bot as Zaid, Test
+from Zeus.main import call_py, bot as Zeus, Test
 from config import SUDO_USERS
 
 logging.basicConfig(level=logging.INFO)
@@ -37,7 +37,7 @@ aud_list = [
 
 
 
-@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
+@Zeus.on_message(filters.user(SUDO_USERS) & filters.command(["vcraid"], prefixes=HNDLR))
 async def vcraid(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -63,7 +63,7 @@ async def vcraid(_, e: Message):
             await e.reply_text(f"**> Raiding in:** {chat.title} \n\n**> Audio:** {songname} \n**> Position:** Ongoing Raid")
 
 
-@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
+@Zeus.on_message(filters.user(SUDO_USERS) & filters.command(["raidend"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -84,7 +84,7 @@ async def ping(_, e: Message):
         await e.reply_text("**No ongoing raid!**")
 
 
-@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
+@Zeus.on_message(filters.user(SUDO_USERS) & filters.command(["raidpause"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id
@@ -105,7 +105,7 @@ async def ping(_, e: Message):
         await e.reply_text("**No ongoing raid!**")
 
 
-@Zaid.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], prefixes=HNDLR))
+@Zeus.on_message(filters.user(SUDO_USERS) & filters.command(["raidresume"], prefixes=HNDLR))
 async def ping(_, e: Message):
     gid = e.chat.id
     uid = e.from_user.id

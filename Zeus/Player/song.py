@@ -15,15 +15,15 @@ import requests
 import wget
 import yt_dlp
 from pyrogram import filters
-from Zaid.main import bot as Client
+from Zeus.main import bot as Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
 
 from config import BOT_USERNAME as bn, SUDO_USERS
-from Zaid.decorators import humanbytes
-from Zaid.filters import command, other_filters
+from Zeus.decorators import humanbytes
+from Zeus.filters import command, other_filters
 
 
 ydl_opts = {
